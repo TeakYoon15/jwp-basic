@@ -56,27 +56,20 @@
 		    <!-- answers start -->
 		    <h3>
 		        댓글 수 : ${question.countOfComment}
-		    </h3>
-			   <c:forEach var="each" items="${answers}">    
-			
-			    <div class="answer"></div>
-			 		<p>
-			 		
-			 		<b>${each.writer}</b> <br>${each.createdDate} <br> ${each.contents}
-					
-
-					<td><a class="answerDelete" href="/api/qna/deleteanswer.next?answerId=1">삭제</a></td>
-					</p><br>
-		    		
-
-		    	</c:forEach>
-			    
-		    
+		    </h3>		    
+			<div class="answers">
+			    <div class="answer">
+			    	<b>자바지기</b><p>Thread safe 랑 final은 관계가 있는거지만 다르게 봐야 하는게 아닌가?</p>
+			    	<a class="answerDelete" href="/api/qna/deleteanswer.next?answerId=1">삭제</a>
+			    </div>
+			    <div class="answer">
+			    	<b>강우</b><p>저도 잘은 모르겠지만, 그냥 몇글자 적어볼께요.</p>
+			    	<a class="answerDelete" href="/api/qna/deleteanswer.next?answerId=${answerId}"}>삭제</a>
+			    </div>			    
 			</div>
 		</div>
 	</div>
 <%@ include file="/include/footer.jspf" %>	
 </body>
 </html>
-
 

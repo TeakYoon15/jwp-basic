@@ -5,6 +5,7 @@ import java.util.Map;
 
 import next.web.qna.AddAnswerController;
 import next.web.qna.ListController;
+import next.web.qna.SaveController;
 import next.web.qna.ShowController;
 import next.web.user.CreateController;
 import next.web.user.LoginController;
@@ -32,6 +33,8 @@ public class RequestMapping {
 		mappings.put("/qna/show.next", new ShowController());
 		mappings.put("/api/qna/addanswer.next", new AddAnswerController());
 		mappings.put("/qna/form.next", new ForwardController("/qna/form.jsp"));
+		mappings.put("/qna/create.next", new SaveController());
+
 		
 		
 		logger.info("Initialized Request Mapping!");
